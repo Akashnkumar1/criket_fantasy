@@ -1,0 +1,113 @@
+#According to senario 
+
+user_name=input("Enter user ID: ")
+
+player_name = input("Enter Player Name:")
+
+user_input="kuch v"
+
+type_of_match = "koi v match"
+
+test_match = list()
+odi_match = list()
+t20_match = list()
+
+def showMenu():
+    print("Menu:")
+    print("1. Add Matches:")
+    print("2. Remove Matches:")
+    print("3. View Number of Match Played:")
+    print("4. Exit:")
+
+def subMenu():
+    print("Select type of Match: ")
+    print("1. Test Match")
+    print("2. ODI Match")
+    print("3. T20 Match")
+    print("4. Exit:")
+
+    while user_input != '4':
+        showMenu()
+        user_input = input("Enter your Choice: ")
+
+        if user_input == 1:
+            
+            while type_of_match != '4':
+                subMenu()
+                type_of_match = input("Enter your Choice: ")
+
+                if user_input == 1 :
+                    match = int(input("Enter the numbers of matches: ")
+                    test_match.append(match)
+                    print("Number of test match added: ",match)
+                elif user_input == 2 :
+                    match = int(input("Enter the numbers of matches: ")
+                    odi_match.append(match)
+                    print("Number of test match added: ",match)
+                    if match in 
+                elif user_input == 3 :
+                    match = int(input("Enter the numbers of matches: ")
+                    t20_match.append(match)
+                    print("Number of test match added: ",match)
+                elif user_input == 4 :
+                     print("Thank you for using the tool SAN {}. Have a Great day!".format(user_name))
+
+        elif user_input == 2:
+            while type_of_match != '4':
+                subMenu()
+                type_of_match = input("Enter your Choice: ")
+
+                if user_input == 1 :
+                    match = int(input("Enter the numbers of matches: ")
+                    if match in test_match:
+                        test_match.remove(match)
+                        print("Number of match removed: ",match)
+                    else:
+                        print("Match dose not Exists! ")
+
+                elif user_input == 2 :
+                    match = int(input("Enter the numbers of matches: ")
+                    if match in test_match:
+                        odi_match.remove(match)
+                        print("Number of match removed: ",match)
+                    else:
+                        print("Match dose not Exists! ")
+
+                elif user_input == 3 :
+                    match = int(input("Enter the numbers of matches: ")
+                     if match in test_match:
+                        t20_match.remove(match)
+                        print("Number of match removed: ",match)
+                    else:
+                        print("Match dose not Exists! ")
+
+                elif user_input == 4 :
+                     print("Thank you for using the tool SAN {}. Have a Great day!".format(user_name))
+
+        elif user_input == 3:
+            while type_of_match != '4':
+                subMenu()
+                type_of_match = input("Enter your Choice: ")
+
+                if user_input == 1 :
+                    print("Number of test match played: ")
+                    for match in test_match:
+                        print(match)
+                    
+                elif user_input == 2 :
+                    print("Number of ODI match played: ")
+                    for match in odi_match:
+                        print(match)
+
+                elif user_input == 3 :
+                    print("Number of T20 match played: ")
+                    for match in t20_match:
+                        print(match)
+
+                elif user_input == 4 :
+                     print("Thank you for using the tool SAN {}. Have a Great day!".format(user_name))
+
+        elif user_input == 4:
+            print("Thank you for using the tool SAN {}. Have a Great day!".format(user_name))
+
+print("Player Name:{}  Number of Test Match:{}  Number of ODI Match:{}  Number of T20 Match:{}".format(player_name,test_match,odi_match,t20_match))
